@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html>
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <f:view contentType="text/html" locale="pt" />
+    <head>
+        <title>Quantidade de vendas</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body>
+        <style>
+            
+            TABLE {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            TH {
+              text-align: left;
+              padding: 8px;
+            }
+
+            TH {
+              background-color: cornflowerblue;
+              color: black;
+            }
+            
+            tr:nth-child(even) {
+               background-color: #dddddd;
+            }
+            
+            td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            a:link, a:visited {
+                background-color: cornflowerblue;
+                color: white;
+                padding: 5px 14px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            a:hover, a:active {
+                background-color: white;
+                color: cornflowerblue;
+            }
+            
+        </style>
+        
+        <TABLE>
+            <TR>
+                <TH><img src="imagens/blackaper40.png" alt="techholding"/> Techhouding</TH>
+                <TH rowspan="3"></TH>
+                <TH>Quantidade total de vendas por produto e por lojas</TH>
+                <TH rowspan="3"></TH>
+                <TH><a href="gerente.xhtml">Voltar</a></TH>
+            </TR>
+        </TABLE>
+        
+        <br/>
+        
+        <table>
+            <tr>
+                <th>
+                    <form jsfc="h:form">
+                        <input action="#{relatorioControle.LojaProd()}" type="submit" value="Gerar" jsfc="h:commandButton"></input>
+                    </form>
+                </th>
+            </tr>
+        </table>
+        
+        <br/>
+            
+            <table>
+                <tr>
+                    <th>Loja</th>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                </tr>
+                <ui:repeat value="#{relatorioControle.resultado}" var="linha">
+                    <tr>
+                        <td>#{linha[0]}</td>
+                        <td>#{linha[1]}</td>
+                        <td>#{linha[2]}</td>
+                    </tr>
+                </ui:repeat>
+            </table>
+    </body>
+</html>

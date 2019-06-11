@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-br"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <f:view contentType="text/html" locale="pt" />
+
+    <head>
+        <title>Dashboard Vendas</title>
+        <link href="css/sb-admin-2.min.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"/>
+        
+    </head>
+
+    <body>
+        <style>
+            TABLE {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+            TD, TH {
+              text-align: left;
+              padding: 8px;
+            }
+
+            TH {
+              background-color: cornflowerblue;
+              color: black;
+            }
+            TD {
+              background-color: white;
+              color: black;
+            }
+            
+            a:link, a:visited {
+                background-color: cornflowerblue;
+                color: white;
+                padding: 5px 14px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+            a:hover, a:active {
+                background-color: white;
+                color: cornflowerblue;
+            }
+            
+        </style>
+        <TABLE>
+            <TR>
+                <TH><img src="imagens/blackaper40.png" alt="techholding"/> Techhouding</TH>
+                <TH>Bem vindo Gerente!</TH>
+                <TH><a href="index.xhtml">Sair</a></TH>
+            </TR>
+        </TABLE>
+        
+        <br/>
+        
+        <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><h6>Quantidade de vendas no semestre atual</h6></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">#{relatorioControle.quantidadeVendas}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><h6>Valor total de vendas no semestre atual</h6></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">#{relatorioControle.totalVendas}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1"><h6>Quantidade de lojas da empresa</h6></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">#{relatorioControle.totalLoja}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h6>Total de clientes da empresa</h6></div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">#{relatorioControle.totalClientes}</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-comments fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h6><a href = "relatorio-vendas.xhtml">Valor total vendido por loja por semestre</a></h6></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <br/>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h6><a href = "cliente-ano.xhtml">Valor total vendido para os cliente por ano</a></h6></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <br/>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h6><a href = "vlrprodloja.xhtml">Quantidade total de vendas por produto e por lojas</a></h6></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <br/>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h6><a href = "grafvenreg.xhtml">Grafico de vendas por região</a></h6></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <br/>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h6><a href = "qtdprodvend.xhtml">Quantidade dos produtos vendidos por tempo</a></h6></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <br/>
+            
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><h6><a href = "resultordenado.xhtml">Gerar codigo JSON com dados ordenados</a></h6></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <br/>
+            
+            <TABLE>
+                <TR>
+                    <TH><img src="imagens/blackaper40.png" alt="techholding"/></TH>
+                    <TH rowspan="3"></TH>
+                    <TH>--------------------------------------------------------------</TH>
+                    <TH rowspan="3"></TH>
+                    <TH>©2019 Techhouding</TH>
+                </TR>
+            </TABLE>
+        
+    </body>
+</html>
